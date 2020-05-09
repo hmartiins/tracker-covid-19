@@ -17,44 +17,44 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
       <div className={classes.container}>
          <Grid container justify="center" spacing={3}>
          <Grid 
-               item 
-               component={Card} 
-               xs={12}
-               md={3}
-               className={[classes.card, classes.recovered].join(' ')}
-            >
-               <CardContent>
-                  <Typography color="textSecondary" gutterBottom >
-                     Recuperados
-                  </Typography>
-                  <Typography variant="h5">
-                     <CountUp 
-                        start={0}
-                        end={recovered.value}
-                        duration={2.77}
-                        separator=','
-                     />
-                  </Typography>
-                  <Typography color="textSecondary">
-                     {new Date(lastUpdate).toDateString()}
-                  </Typography>
-                  <Typography variant="body2">
-                     Número de casos recuperados
-                  </Typography>
-               </CardContent>
-            </Grid>
-            <Grid 
-               item 
-               component={Card} 
-               xs={12}
-               md={4}
-               className={[classes.card, classes.infected].join(' ')}
-            >
-               <CardContent>
-                  <Typography color="textSecondary" gutterBottom >
-                     Infectados
-                  </Typography>
-                  <Typography variant="h5">
+            item 
+            component={Card} 
+            xs={12}
+            md={3}
+            className={[classes.card, classes.recovered].join(' ')}
+         >
+            <CardContent>
+               <Typography color="textSecondary" gutterBottom >
+                  Recuperados
+               </Typography>
+               <Typography variant="h5">
+                  <CountUp 
+                     start={0}
+                     end={recovered.value}
+                     duration={2.77}
+                     separator=','
+                  />
+               </Typography>
+               <Typography color="textSecondary">
+                  {new Date(lastUpdate).toDateString()}
+               </Typography>
+               <Typography variant="body2">
+                  Número de casos recuperados
+               </Typography>
+            </CardContent>
+         </Grid>
+         <Grid 
+            item 
+            component={Card} 
+            xs={12}
+            md={4}
+            className={[classes.card, classes.infected].join(' ')}
+         >
+            <CardContent>
+               <Typography color="textSecondary" gutterBottom >
+                  Infectados
+               </Typography>
+               <Typography variant="h5">
                      <CountUp 
                         start={0}
                         end={confirmed.value}

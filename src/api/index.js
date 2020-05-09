@@ -14,6 +14,14 @@ export const fetchData = async () => {
       };
       
    } catch (err) {
+      console.error('Algo deu errado ao carregar os dados'); 
+   }
+}
+export const fetchUpdateDaily = async () =>{
+   try {
+      const { data } = await axios.get(`${url}/daily`);
       
+   } catch (err) {
+      console.error('Algo deu errado ao carregar os dados');
    }
 }
